@@ -1,4 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/sections/Hero";
 
 export default function Home() {
   return (
@@ -8,9 +9,9 @@ export default function Home() {
       <main>
         <section
           id="home"
-          className="flex min-h-screen items-center justify-center"
+          className="min-h-screen"
         >
-          <h1 className="text-6xl font-bold">Hero Section</h1>
+          <Hero />
         </section>
 
         <section

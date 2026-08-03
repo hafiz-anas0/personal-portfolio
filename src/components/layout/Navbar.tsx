@@ -64,13 +64,13 @@ export default function Navbar() {
                     </Link>
 
                     {/* Desktop Nav */}
-                    <nav className="hidden items-center gap-8 md:flex">
+                    <nav className="hidden items-center gap-8 lg:flex">
                         {navLinks.map((item) => (
                             <Link
                                 key={item.name}
                                 href={item.href}
                                 onClick={() => setActiveSection(item.href.substring(1))}
-                                className={`text-sm font-medium transition-colors duration-300 ${activeSection === item.href.substring(1)
+                                className={`text- font-medium transition-colors duration-300 ${activeSection === item.href.substring(1)
                                     ? "text-blue-600 underline decoration-0 underline-offset-6"
                                     : "text-slate-500 hover:text-slate-900"
                                     }`}
@@ -81,7 +81,7 @@ export default function Navbar() {
                     </nav>
 
                     {/* Right */}
-                    <div className="hidden items-center gap-4 md:flex">
+                    <div className="hidden items-center gap-4 lg:flex">
                         <button className="flex items-center gap-2 rounded-full cursor-pointer bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg">
                             <Download size={18} />
                             Resume
@@ -91,7 +91,7 @@ export default function Navbar() {
                     {/* Mobile */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100 md:hidden"
+                        className="rounded-lg p-2 text-slate-700 transition hover:bg-slate-100 lg:hidden"
                     >
                         {isOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
@@ -99,7 +99,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu */}
                 <div
-                    className={`mx-4 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-300 md:hidden
+                    className={`mx-4 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg transition-all duration-300 lg:hidden
           ${isOpen
                             ? "opacity-100"
                             : "max-h-0 border-0 opacity-0"
