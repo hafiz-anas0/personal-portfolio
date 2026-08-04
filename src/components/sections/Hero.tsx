@@ -32,7 +32,7 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/70 to-cyan-50 pt-32 lg:pt-20"
+            className="relative flex min-h-screen items-center overflow-hidden bg-linear-to-br from-slate-50 via-blue-50/70 to-cyan-50 pt-32 lg:pt-20"
         >
             {/* Background Mesh */}
 
@@ -40,15 +40,15 @@ export default function Hero() {
 
                 {/* Blue */}
 
-                <div className="absolute -left-32 -top-32 h-[34rem] w-[34rem] rounded-full bg-blue-300/30 blur-[140px]" />
+                <div className="absolute -left-32 -top-32 h-136 w-136 rounded-full bg-blue-300/30 blur-[140px]" />
 
                 {/* Cyan */}
 
-                <div className="absolute right-0 top-24 h-[28rem] w-[28rem] rounded-full bg-cyan-300/30 blur-[140px]" />
+                <div className="absolute right-0 top-24 h-112 w-md rounded-full bg-cyan-300/30 blur-[140px]" />
 
                 {/* Indigo */}
 
-                <div className="absolute bottom-0 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-indigo-200/25 blur-[160px]" />
+                <div className="absolute bottom-0 left-1/2 h-128 w-lg -translate-x-1/2 rounded-full bg-indigo-200/25 blur-[160px]" />
 
             </div>
             {/* Grid Overlay */}
