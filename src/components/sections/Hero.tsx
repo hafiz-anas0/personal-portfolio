@@ -153,9 +153,6 @@ export default function Hero() {
                 </div>
 
             </div>
-            {/* Bottom Fade */}
-
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-b from-transparent to-slate-50" />
         </section>
     );
 }
