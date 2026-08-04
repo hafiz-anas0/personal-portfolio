@@ -8,8 +8,8 @@ const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
-    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
+    { name: "Experience", href: "#experience" },
     { name: "Education", href: "#education" },
     { name: "Certifications", href: "#certifications" },
     { name: "Contact", href: "#contact" },
@@ -41,7 +41,7 @@ export default function Navbar() {
                 });
             },
             {
-                threshold: 0.5,
+                threshold: 0.25,
             }
         );
 

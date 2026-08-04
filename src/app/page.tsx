@@ -2,6 +2,7 @@ import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
+import Projects from "@/components/sections/Projects";
 
 export default function Home() {
   return (
@@ -9,34 +10,13 @@ export default function Home() {
       <Navbar />
 
       <main>
-        <section
-          id="home"
-          className="min-h-screen"
-        >
           <Hero />
-        </section>
-
-        <section
-          id="about"
-          className="min-h-screen"
-        >
           <About />
-        </section>
-
-        <section
-          id="skills"
-          className="min-h-screen"
-        >
           <Skills />
-        </section>
+          <Projects />
 
         <section
           id="experience"
-          className="min-h-screen"
-        />
-
-        <section
-          id="projects"
           className="min-h-screen"
         />
 

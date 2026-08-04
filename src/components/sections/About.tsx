@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import profile from "@/assets/images/profile.jpeg";
+import profile from "@/assets/images/profile2.jpeg";
 import { Brain, Code2, ChartColumn, Rocket, MapPin, GraduationCap, BriefcaseBusiness, Languages, Download, ArrowRight, Database, Palette, Sparkles, LaptopMinimal, BadgeCheck, } from "lucide-react";
 
 const expertise = [

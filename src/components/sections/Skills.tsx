@@ -6,10 +6,8 @@ export default function Skills() {
     return (
         <section
             id="skills"
-            className="relative overflow-hidden bg-white py-20">
-            <div className="absolute -left-40 top-20 h-96 w-96 rounded-full bg-blue-100/40 blur-3xl" />
-            <div className="absolute right-0 bottom-0 h-80 w-80 rounded-full bg-cyan-100/30 blur-3xl" />
-            <div className="relative">
+            className="overflow-hidden bg-white py-20">
+
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
 
@@ -78,7 +76,6 @@ export default function Skills() {
                     </div>
 
                 </div>
-            </div>
         </section>
     );
 }
