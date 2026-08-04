@@ -4,6 +4,7 @@ import About from "@/components/sections/About";
 import Skills from "@/components/sections/Skills";
 import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
+import Education from "@/components/sections/Education";
 
 export default function Home() {
   return (
@@ -11,17 +12,12 @@ export default function Home() {
       <Navbar />
 
       <main>
-          <Hero />
-          <About />
-          <Skills />
-          <Projects />
-          <Experience />
-
-
-        <section
-          id="education"
-          className="min-h-screen"
-        />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
 
 
         <section
