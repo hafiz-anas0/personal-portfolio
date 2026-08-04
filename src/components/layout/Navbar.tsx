@@ -70,7 +70,7 @@ export default function Navbar() {
                                 key={item.name}
                                 href={item.href}
                                 onClick={() => setActiveSection(item.href.substring(1))}
-                                className={`text- font-medium transition-colors duration-300 ${activeSection === item.href.substring(1)
+                                className={`font-medium transition-colors duration-300 ${activeSection === item.href.substring(1)
                                     ? "text-blue-600 underline decoration-0 underline-offset-6"
                                     : "text-slate-500 hover:text-slate-900"
                                     }`}
