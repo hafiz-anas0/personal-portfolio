@@ -32,8 +32,37 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative flex min-h-screen items-center overflow-hidden bg-white pt-32 lg:pt-20"
+            className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/70 to-cyan-50 pt-32 lg:pt-20"
         >
+            {/* Background Mesh */}
+
+            <div className="absolute inset-0 -z-10 overflow-hidden">
+
+                {/* Blue */}
+
+                <div className="absolute -left-32 -top-32 h-[34rem] w-[34rem] rounded-full bg-blue-300/30 blur-[140px]" />
+
+                {/* Cyan */}
+
+                <div className="absolute right-0 top-24 h-[28rem] w-[28rem] rounded-full bg-cyan-300/30 blur-[140px]" />
+
+                {/* Indigo */}
+
+                <div className="absolute bottom-0 left-1/2 h-[32rem] w-[32rem] -translate-x-1/2 rounded-full bg-indigo-200/25 blur-[160px]" />
+
+            </div>
+            {/* Grid Overlay */}
+
+            <div
+                className="absolute inset-0 -z-10 opacity-[0.05]"
+                style={{
+                    backgroundImage: `
+            linear-gradient(to right, rgb(15 23 42 / .18) 1px, transparent 1px),
+            linear-gradient(to bottom, rgb(15 23 42 / .18) 1px, transparent 1px)
+        `,
+                    backgroundSize: "48px 48px",
+                }}
+            />
             {/* Floating Social Icons */}
             <div className="fixed left-6 top-1/2 hidden -translate-y-1/2 flex-col gap-5 lg:flex">
                 {socialLinks.map((social) => {
@@ -124,6 +153,9 @@ export default function Hero() {
                 </div>
 
             </div>
+            {/* Bottom Fade */}
+
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 h-30 bg-gradient-to-b from-transparent to-slate-50" />
         </section>
     );
 }
