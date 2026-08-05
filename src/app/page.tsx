@@ -7,6 +7,7 @@ import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import Certifications from "@/components/sections/Certifications";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
         <Contact />
 
       </main>
+      <Footer />
     </>
   );
 }
