@@ -6,6 +6,7 @@ import Projects from "@/components/sections/Projects";
 import Experience from "@/components/sections/Experience";
 import Education from "@/components/sections/Education";
 import Certifications from "@/components/sections/Certifications";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -20,11 +21,8 @@ export default function Home() {
         <Experience />
         <Education />
         <Certifications />
+        <Contact />
 
-        <section
-          id="contact"
-          className="min-h-screen"
-        />
       </main>
     </>
   );
