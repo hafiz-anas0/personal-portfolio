@@ -1,7 +1,8 @@
 "use client";
 import Image from "next/image";
 import profile from "@/assets/images/profile2.jpeg";
-import { Brain, Code2, ChartColumn, Rocket, MapPin, GraduationCap, BriefcaseBusiness, Languages, Download, ArrowRight, Database, Palette, Sparkles, LaptopMinimal, BadgeCheck, } from "lucide-react";
+import { Brain, Code2, ChartColumn, Rocket, MapPin, GraduationCap, Download, ArrowRight, Database, Palette, Sparkles, LaptopMinimal, } from "lucide-react";
+import Link from "next/link";
 
 const expertise = [
     {
@@ -39,28 +40,6 @@ const expertise = [
         title: "Deployment & Optimization",
         description:
             "Deploying applications with Vercel, Render, and GitHub while optimizing performance and maintainability.",
-    },
-];
-const info = [
-    {
-        icon: MapPin,
-        label: "Location",
-        value: "Lahore, Pakistan",
-    },
-    {
-        icon: GraduationCap,
-        label: "Education",
-        value: "BS Computer Science",
-    },
-    {
-        icon: BriefcaseBusiness,
-        label: "Status",
-        value: "Open to Opportunities",
-    },
-    {
-        icon: Languages,
-        label: "Languages",
-        value: "English & Urdu",
     },
 ];
 
@@ -179,7 +158,7 @@ export default function About() {
                                 <span className="mt-3 h-2.5 w-2.5 rounded-full bg-blue-600 shrink-0"></span>
 
                                 <p className="text-lg leading-8 text-slate-600">
-                                    I'm{" "}
+                                    I&apos;m{" "}
                                     <span className="font-semibold text-blue-600">
                                         Hafiz Muhammad Anas Majid
                                     </span>
@@ -197,7 +176,7 @@ export default function About() {
                                 <span className="mt-3 h-2.5 w-2.5 rounded-full bg-blue-600 shrink-0"></span>
 
                                 <p className="text-lg leading-8 text-slate-600">
-                                    Currently pursuing a BS in Computer Science, I've built
+                                    Currently pursuing a BS in Computer Science, I&apos;ve built
                                     production-ready applications, AI-powered tools, and machine
                                     learning projects while continuously expanding my expertise in
                                     emerging technologies.
@@ -297,30 +276,32 @@ export default function About() {
                 <div className="mt-20 rounded-3xl bg-linear-to-r from-blue-50 to-white border border-blue-100 p-10 justify-center text-center shadow-lg justify-items-center">
 
                     <h3 className="text-2xl font-bold text-slate-900">
-                        Let's Build Something Amazing
+                        Let&apos;s Build Something Amazing
                     </h3>
 
                     <p className="mt-2 text-slate-600">
-                        Whether it's an AI solution, a modern web application, or a collaborative project, I'm always excited to connect.
+                        Whether it&apos;s an AI solution, a modern web application, or a collaborative project, I&apos;m always excited to connect.
                     </p>
 
                     <div className="mt-8 flex flex-wrap gap-4 justify-center">
-                        <button className="flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-lg cursor-pointer">
+                        <a href="/resume/Hafiz_Muhammad_Anas_Majid.pdf" download>
+                            <button className="flex items-center gap-2 rounded-xl bg-blue-600 px-8 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-blue-700 hover:shadow-lg cursor-pointer">
 
-                            <Download size={18} />
+                                <Download size={18} />
 
-                            Download CV
+                                Download CV
 
-                        </button>
+                            </button>
+                        </a>
+                        <Link href="/#contact">
+                            <button className="flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-8 py-4 font-medium text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
 
-                        <button className="flex items-center gap-2 rounded-xl border border-slate-300 bg-white px-8 py-4 font-medium text-slate-700 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg cursor-pointer">
+                                Contact Me
 
-                            Contact Me
+                                <ArrowRight size={18} />
 
-                            <ArrowRight size={18} />
-
-                        </button>
-
+                            </button>
+                        </Link>
                     </div>
 
                 </div>

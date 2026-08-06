@@ -61,6 +61,7 @@ export default function Certifications() {
                 {/* Image Modal */}
 
                 <ProjectImageModal
+                
                     images={[image]}
                     initialIndex={0}
                     open={open}

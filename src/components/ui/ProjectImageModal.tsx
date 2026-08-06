@@ -24,9 +24,11 @@ export default function ProjectImageModal({
     const [current, setCurrent] = useState(initialIndex);
 
     useEffect(() => {
-        setCurrent(initialIndex);
-    }, [initialIndex]);
-
+        if (open) {
+            setCurrent(initialIndex);
+        }
+    }, [open, initialIndex]);
+    
     useEffect(() => {
         if (!open) return;
 

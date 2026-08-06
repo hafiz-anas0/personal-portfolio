@@ -70,12 +70,12 @@ export default function Contact() {
                     </span>
 
                     <h2 className="mt-6 text-3xl font-bold text-slate-900 lg:text-4xl">
-                        Let's Build Something Together
+                        Let&apos;s Build Something Together
                     </h2>
 
                     <p className="mx-auto mt-5 max-w-3xl leading-8 text-slate-600">
                         Whether you have a project, an opportunity,
-                        freelance work, or just want to connect, I'd love to
+                        freelance work, or just want to connect, I&apos;d love to
                         hear from you.
                     </p>
 

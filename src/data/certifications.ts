@@ -1,6 +1,3 @@
-import { FaReact, FaNodeJs } from "react-icons/fa";
-import { SiExpress, SiMongodb } from "react-icons/si";
-
 export interface Certification {
     id: number;
 

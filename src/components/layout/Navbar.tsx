@@ -98,6 +98,17 @@ export default function Navbar() {
 
     }, []);
 
+    const scrollToSection = (id: string) => {
+        setActiveSection(id);
+
+        document.getElementById(id)?.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+
+        setIsOpen(false);
+        setProfileOpen(false);
+    };
 
 
     return (
@@ -119,12 +130,12 @@ export default function Navbar() {
 
                 {/* Logo */}
 
-                <Link
-                    href="#home"
-                    className="text-3xl font-bold tracking-tight text-slate-900"
+                <button
+                    onClick={() => scrollToSection("home")}
+                    className="cursor-pointer text-3xl font-bold tracking-tight text-slate-900"
                 >
                     HAM<span className="text-blue-600">.</span>
-                </Link>
+                </button>
 
 
 
@@ -134,24 +145,19 @@ export default function Navbar() {
 
                     {navLinks.map((item) => (
 
-                        <Link
+                        <button
                             key={item.name}
-                            href={item.href}
-                            onClick={() =>
-                                setActiveSection(
-                                    item.href.substring(1)
-                                )
-                            }
+                            onClick={() => scrollToSection(item.href.substring(1))}
                             className={`
                             font-medium transition-colors
                             ${activeSection === item.href.substring(1)
-                                    ? "text-blue-600 underline underline-offset-6"
-                                    : "text-slate-500 hover:text-slate-900"
+                                    ? "text-blue-600 underline underline-offset-6 cursor-pointer"
+                                    : "text-slate-500 hover:text-slate-900 cursor-pointer"
                                 }
                             `}
                         >
                             {item.name}
-                        </Link>
+                        </button>
 
                     ))}
 
@@ -163,20 +169,25 @@ export default function Navbar() {
 
                 <div className="hidden items-center gap-4 lg:flex">
 
-
-                    <button
+                    <a
+                        href="/resume/Hafiz_Muhammad_Anas_Majid.pdf"
+                        download
                         className="
-                        flex items-center gap-2 rounded-full
-                        bg-blue-600 px-5 py-2.5 text-sm
-                        font-medium text-white transition
-                        hover:-translate-y-0.5
-                        hover:bg-blue-700
-                        hover:shadow-lg cursor-pointer
-                        "
+    flex items-center gap-2
+    rounded-full
+    bg-blue-600
+    px-5 py-2.5
+    text-sm font-medium
+    text-white
+    transition
+    hover:-translate-y-0.5
+    hover:bg-blue-700
+    hover:shadow-lg
+    "
                     >
                         <Download size={18} />
                         Resume
-                    </button>
+                    </a>
 
 
 
@@ -327,54 +338,53 @@ export default function Navbar() {
 
                         {navLinks.map((item) => (
 
-                            <Link
+                            <button
                                 key={item.name}
-                                href={item.href}
-                                onClick={() => {
-                                    setActiveSection(
-                                        item.href.substring(1)
-                                    );
-                                    setIsOpen(false);
-                                }}
-                                className="
-                                rounded-lg px-3 py-3
-                                text-slate-600
-                                transition hover:bg-slate-100
-                                "
+                                onClick={() =>
+                                    scrollToSection(item.href.substring(1))
+                                }
+                                className={`
+        rounded-lg px-3 py-3 text-left transition-colors duration-300
+        ${activeSection === item.href.substring(1)
+                                        ? "bg-blue-50 text-blue-600 font-medium"
+                                        : "text-slate-600 hover:bg-slate-100 hover:text-slate-900"
+                                    }
+    `}
                             >
                                 {item.name}
-                            </Link>
+                            </button>
 
                         ))}
 
-
-
-                        <button
+                        <a
+                            href="/resume/Hafiz_Muhammad_Anas_Majid.pdf"
+                            download
                             className="
-                            mt-4 flex items-center
-                            justify-center gap-2
-                            rounded-full bg-blue-600
-                            py-3 font-medium text-white
-                            "
+    mt-4 flex w-full
+    items-center justify-center
+    gap-2 rounded-full
+    bg-blue-600
+    py-3
+    font-medium
+    text-white
+    transition
+    hover:bg-blue-700
+    "
                         >
                             <Download size={18} />
-
-                            Download Resume
-
-                        </button>
-
-
+                            Resume
+                        </a>
 
                         {!loading && !user && (
 
                             <Link
                                 href="/login"
                                 className="
-                                mt-3 rounded-full
-                                bg-slate-900 py-3
-                                text-center font-medium
-                                text-white
-                                "
+                            mt-3 rounded-full
+                            bg-slate-900 py-3
+                            text-center font-medium
+                            text-white
+                            "
                             >
                                 Login
                             </Link>
@@ -387,9 +397,9 @@ export default function Navbar() {
 
                             <div
                                 className="
-                                mt-4 rounded-xl
-                                bg-slate-100 p-4
-                                "
+                            mt-4 rounded-xl
+                            bg-slate-100 p-4
+                            "
                             >
 
                                 <div className="flex items-center gap-3">
@@ -442,8 +452,9 @@ export default function Navbar() {
 
                 </div>
 
-            )}
+            )
+            }
 
-        </header>
+        </header >
     );
 }

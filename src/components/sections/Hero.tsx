@@ -4,6 +4,7 @@ import profile from "../../assets/images/profile.jpeg";
 import Image from "next/image";
 import { FaGithub, FaLinkedinIn, FaWhatsapp, } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
+import Link from "next/link";
 
 const socialLinks = [
     {
@@ -98,7 +99,7 @@ export default function Hero() {
 
                     <div className="space-y-2">
                         <h2 className="text-base font-medium tracking-wide text-slate-500">
-                            Hi, I'm
+                            Hi, I&apos;m
                         </h2>
 
                         <h1 className="text-4xl sm:text-5xl xl:text-6xl font-extrabold leading-tight text-slate-900">
@@ -116,14 +117,16 @@ export default function Hero() {
                         I build intelligent web applications by combining modern frontend technologies, scalable backend systems, and Generative AI to deliver impactful digital experiences.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4 lg:justify-start">
-
-                        <button className="flex items-center gap-2 rounded-xl cursor-pointer bg-blue-600 px-10 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg">
-                            View My Work
-                        </button>
-
-                        <button className="flex items-center gap-2 rounded-xl cursor-pointer bg-black px-10 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-lg">
-                            Download CV
-                        </button>
+                        <Link href="/#projects">
+                            <button className="flex items-center gap-2 rounded-xl cursor-pointer bg-blue-600 px-10 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-blue-700 hover:shadow-lg">
+                                View My Work
+                            </button>
+                        </Link>
+                        <a href="/resume/Hafiz_Muhammad_Anas_Majid.pdf" download>
+                            <button className="flex items-center gap-2 rounded-xl cursor-pointer bg-black px-10 py-4 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-lg">
+                                Download CV
+                            </button>
+                        </a>
 
                     </div>
 
