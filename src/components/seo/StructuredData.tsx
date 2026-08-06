@@ -7,9 +7,9 @@ export default function StructuredData() {
 
         alternateName: "Hafiz Anas",
 
-        url: "https://your-domain.vercel.app",
+        url: "https://hafizanasmajid.vercel.app",
 
-        image: "https://your-domain.vercel.app/og/og-image.png",
+        image: "https://hafizanasmajid.vercel.app/og/og-image.png",
 
         jobTitle: "AI Engineer & Full-Stack Developer",
 

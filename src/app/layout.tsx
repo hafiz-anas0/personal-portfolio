@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://YOUR_DOMAIN.com"),
+  metadataBase: new URL("https://hafizanasmajid.vercel.app"),
 
   title: {
     default: "Hafiz Muhammad Anas Majid | AI & Full-Stack Developer",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
   authors: [
     {
       name: "Hafiz Muhammad Anas Majid",
-      url: "https://YOUR_DOMAIN.com",
+      url: "https://hafizanasmajid.vercel.app",
     },
   ],
 
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     description:
       "Full-Stack Developer with experience at ML Bench and P2P Clouds, specializing in React, Next.js, MERN Stack, and AI-powered web applications.",
 
-    url: "https://YOUR_DOMAIN.com",
+    url: "https://hafizanasmajid.vercel.app",
 
     siteName: "Hafiz Muhammad Anas Majid Portfolio",
 
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://YOUR_DOMAIN.com",
+    canonical: "https://hafizanasmajid.vercel.app",
   },
 };
 
