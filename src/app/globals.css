@@ -18,3 +18,17 @@ body {
   --primary: #2563eb;
   
 }
+/* Chrome Autofill */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0 1000px rgb(2 6 23) inset !important;
+  box-shadow: 0 0 0 1000px rgb(2 6 23) inset !important;
+
+  border-radius: 0.75rem !important;
+
+  transition: background-color 99999s ease-in-out 0s;
+}
